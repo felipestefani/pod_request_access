@@ -1,0 +1,121 @@
+
+.main_container {
+    background-color: var(--background);
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.logo_container {
+    position: absolute;
+    left: 10.31rem;
+    top: 6.38rem;
+
+}
+
+.content_container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text_form_container {
+    background-color: var(--background);
+    position: absolute;
+    width: 45.2rem;
+    height: 31.8rem;
+    bottom: 8.12rem;
+    left: 10.31rem;
+    padding-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--main);
+}
+
+span {
+    color: var(--white);
+}
+
+.dots {
+    position: absolute;
+    bottom: 4.87rem;
+    right: 0;
+}
+
+p {
+    color: #C2CBE5;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem; /* 155.556% */
+    width: 27.8rem;
+    margin: 1.5rem 0 2.5rem;
+}
+
+form {
+    margin-bottom: 5.81rem;
+    border-radius: 1.75rem;
+    background: var(--form-background);
+    width: 26.7rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+input {
+    background-color: var(--form-background);
+    border: none;
+    color: #FFF;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem; /* 200% */
+    border-radius: 1.75rem;
+    width: 100%;
+    padding-left: 2rem;
+    outline-style: none;
+}
+
+button {
+    border: none;
+    width: 10.125rem;
+    height: 2.875rem;
+    flex-shrink: 0;
+    border-radius: 1.75rem;
+    background: #54E6AF;
+    box-shadow: 0px 2px 4px 0px rgba(84, 230, 175, 0.14);
+    color: #121725;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem; /* 200% */
+}
+
+.email_error {
+    display: inline-block;
+    position: absolute;
+    bottom: -1.5rem;
+    color: #FB3E3E;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 2rem;
+}
+
+
+/*--------------------- hover status ---------------------*/
+button:hover {
+    cursor: pointer;
+    background: #B3FFE2;
+    box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.50);
+}

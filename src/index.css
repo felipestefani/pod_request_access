@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;600;700;800&display=swap');
+
+:root {
+  --main: #54E6AF;
+  --background: #121725;
+  --white: #FFFFFF;
+  --form-background: #2C344B;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Chivo', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 33.5rem;
+  justify-content: space-between;
+}
