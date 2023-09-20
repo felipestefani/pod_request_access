@@ -2,14 +2,35 @@ import style from "./style.module.css";
 import logo from "./assets/logos/logo.svg";
 import dots from "./assets/logos/bg-pattern-dots.svg";
 import desktop_image from "./assets/desktop/image-host.jpg";
+import tablet_image from "./assets/tablet/image-host.jpg";
+import mobile_image from "./assets/mobile/image-host.jpg";
 import { podcast_list } from "./variables";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const App = () => {
 
   const [isValid, setIsValid] = useState(true)
   const [email, setEmail] = useState('')
   const emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  })
+
+  useEffect( () => {
+    const updateWindowSize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      })
+    }
+    window.addEventListener('resize', updateWindowSize)
+    return () => {
+      window.removeEventListener('resize', updateWindowSize)
+    }
+  }, [])
+
+
 
   const emailCheck = e => {
     e.preventDefault()
@@ -22,7 +43,7 @@ const App = () => {
         <div className={style.logo_container}>
             <img src={logo} alt='desktop logo' />
         </div>
-        <img src={desktop_image} alt="desktop image background" />
+        <img className={style.main_image} src={windowSize.width >= 950 ? desktop_image : windowSize.width < 950 && windowSize.width >= 585 ? tablet_image : mobile_image } alt="desktop image background" />
         <div className={style.text_form_container}>
           <h1>Publish your podcasts <span>everywhere.</span></h1>
           <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
@@ -40,7 +61,7 @@ const App = () => {
             }    
           </ul>
         </div>
-        <img className={style.dots} src={dots} alt="dots background" />
+        <img className={style.dots} src={dots} alt="dots background" hidden={ windowSize.width < 585 ? true : false} />
       </div>
     </div>
   )

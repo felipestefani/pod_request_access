@@ -10,7 +10,6 @@
     position: absolute;
     left: 10.31rem;
     top: 6.38rem;
-
 }
 
 .content_container {
@@ -35,13 +34,16 @@
 }
 
 h1 {
-    font-size: 52px;
-    font-weight: 300;
-    color: var(--main);
+    color: #54E6AF;
+    font-size: 3.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.875rem; /* 119.231% */
+    text-transform: uppercase;
 }
 
 span {
-    color: var(--white);
+    color: #FFF;
 }
 
 .dots {
@@ -61,7 +63,7 @@ p {
 }
 
 form {
-    margin-bottom: 5.81rem;
+    margin-bottom: 4.13rem;
     border-radius: 1.75rem;
     background: var(--form-background);
     width: 26.7rem;
@@ -118,4 +120,59 @@ button:hover {
     cursor: pointer;
     background: #B3FFE2;
     box-shadow: 0px 25px 20px -20px rgba(84, 230, 175, 0.50);
+}
+
+@media (max-width: 1280px) and (min-width: 950px) {
+    .logo_container, .text_form_container {
+        left: 2.45rem;
+    }
+
+    .text_form_container {
+        width: 39.7rem;
+    }
+}
+
+@media (max-width:949px) and (min-width: 475px) {
+    .content_container {
+        justify-content: flex-start;
+    }
+
+    .logo_container {
+       top: 3.13rem;
+       left:2.45rem; 
+       z-index: 10;
+    }
+
+    .main_image{
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+
+    .dots{
+        left: 2.13rem;
+        bottom: 0;
+    }
+
+    .text_form_container{
+        width: 39.68rem;
+        height: 32rem;
+        position:static;
+        z-index: 10;
+        margin-left: 2.45rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3.5rem; /* 116.667% */
+    }
+
+    span {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+@media (max-width: 584px) {
+    
 }
