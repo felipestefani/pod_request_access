@@ -14,9 +14,3 @@
   font-family: 'Chivo', sans-serif, Arial, Helvetica, sans-serif;
 }
 
-ul {
-  list-style-type: none;
-  display: flex;
-  width: 33.5rem;
-  justify-content: space-between;
-}
